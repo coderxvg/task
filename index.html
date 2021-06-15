@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aster CMI </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      margin: 0px 25px;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .main {
+      background-image: url("Banner_mage.png");
+      height: 541px;
+    }
+
+    .formbody {
+      background-color: #ffff;
+      margin-top: 48px;
+      height: 364px;
+      max-width: 475px;
+      border-radius: 1.2px;
+
+    }
+
+    .formdata {
+      width: 513px;
+    }
+
+    .formtitle {
+      margin-bottom: 15px;
+      margin-left: 6px;
+      padding: 8px;
+    }
+
+    .headingdesign {
+      margin-top: 48px;
+      color: #ffff;
+      padding-left: 96px;
+    }
+
+    .brand {
+      margin-bottom: 0px;
+      font-weight: 800;
+    }
+
+    .subheading {
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+
+    .slogan {
+      padding-bottom: 39px;
+    }
+
+    .subheading1 {
+      font-family: Titillium;
+      letter-spacing: 1.28px;
+      line-height: 40px;
+      font-weight: 600;
+    }
+
+    .subheading2 {
+      font-weight: 100;
+      font-size: 25px;
+    }
+
+    .appointmentbutton {
+      background-color: #DD5A6A;
+      width: 186px;
+      height: 45px;
+      color: #ffff;
+    }
+
+    .submitbutton {
+      background-color: #DD5A6A;
+      color: #ffff;
+    }
+
+    .boneimagehead {
+      text-align: end;
+      margin-top: 60px;
+    }
+
+    .bonepara {
+      margin-top: 62px;
+    }
+
+    .boneheading {
+      background-image: linear-gradient(120deg, #2EC4B8, #6078EA);
+      padding: 19px;
+      border-radius: 3px;
+    }
+
+    .bonesubpara {
+      padding: 39px 0px;
+    }
+
+    .doctors {
+      color: #22B78E;
+      margin-left: 200px;
+    }
+
+    .doctorcard {
+      text-align: center;
+      background-color: #F9F9FF;
+      max-width: 539px;
+      right: 0;
+      margin-left: 200px;
+    }
+
+    .doctorcardheading {
+      color: #22B78E;
+      font-size: 21px;
+      font-weight: 600;
+      font-family: StagSans;
+      padding: 15px 0px;
+    }
+
+    .doctorname {
+      color: #1D5AA6;
+      padding-top: 20px;
+      margin-bottom: 0px;
+      font-weight: 700;
+    }
+
+    .doctordescription {
+      color: #1D5AA6;
+    }
+
+    .middleline {
+      color: #1D5AA6;
+      width: 200px;
+    }
+
+    .knowmore {
+      width: 129px;
+      height: 49px;
+      background-image: linear-gradient(120deg, #2EC4B8, #6078EA);
+      color: #ffff;
+      margin-bottom: 7px;
+    }
+
+    .doctorcard1 {
+      text-align: center;
+      background-color: #F9F9FF;
+      max-width: 539px;
+      left: 0;
+      margin-left: 25px;
+    }
+
+    .narrowtransplant {
+      color: #22B78E;
+      margin-left: 200px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .list {
+      margin-left: 200px;
+      max-width: 1100px;
+    }
+
+    .marrowlist {
+      padding: 15px 0px;
+      list-style-type: circle;
+    }
+
+    .warningbox {
+      max-height: 170px;
+      max-width: 255px;
+      background-color: #FFFFFF;
+      border: 1px solid #E5EAFF;
+      border-radius: 4px;
+      box-shadow: 3px 5px 29px 0 rgb(187 165 228 / 10%);
+      margin-right: 15px;
+      margin-top: 20px;
+    }
+
+    .firstbox {
+      margin-left: 225px;
+    }
+
+    .questioncolor {
+      color: #1D5AA6;
+      margin-left: 200px;
+      font-size: 20px;
+      display: flex;
+      margin-top: 100px;
+      letter-spacing: 1.6px;
+      font-family: StagSans;
+    }
+
+    .showedclass {
+      display: none;
+
+    }
+
+    .marrowtransplantcondin {
+      margin-left: 200px;
+      max-width: 1100px;
+    }
+
+    .linebreak {
+      margin-bottom: 0px;
+    }
+
+    .questioncolor1 {
+      color: #1D5AA6;
+      margin-left: 200px;
+      font-size: 20px;
+      display: flex;
+      margin-top: 50px;
+      letter-spacing: 1.6px;
+      font-family: StagSans;
+      max-width: 1090px;
+    }
+
+    .marrowtransplantcondin1 {
+      margin-left: 210px;
+      max-width: 1100px;
+    }
+
+    .testimonials {
+      color: #22B78E;
+      margin-left: 200px;
+      margin-top: 100px;
+    }
+
+    .testimonialpara {
+      margin-left: 200px;
+      max-width: 1090px;
+    }
+
+    .rectangle {
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+      max-width: 517px;
+      max-height: 249px;
+      margin-left: 200px;
+    }
+
+    .rectangle1 {
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      box-shadow: 9px 8px 27px 0 rgba(0, 0, 0, 0.04);
+      max-width: 517px;
+      max-height: 249px;
+    }
+
+    .longfact {
+      padding-top: 30px;
+      margin-left: 20px;
+      padding-bottom: 50px;
+      font-style: italic;
+    }
+
+    .imagesetting {
+      padding-top: 0px;
+    }
+
+    .cardname {
+      margin-top: 26px;
+    }
+
+    .appointmentbutton {
+      background-color: #004498;
+      border-radius: 3.81px;
+      width: 221px;
+      height: 54px;
+    }
+    .buttonhead{
+      margin: 50px 0px;
+      text-align: center;
+      transform: translateX(38%);
+    }
+    .icons{
+      transform: translateX(40%);
+      padding-right: 5px;
+    }
+    .copyright{
+      transform: translateX(39%);
+      color: #ffff;
+      font-weight: 100;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid ">
+    <div class="row main">
+      <div class="col-6 headingdesign">
+        <h1 class="brand"> Aster</h1>
+        <h3 class="subheading">CMI HOSPITAL</h3>
+        <p class="slogan">We'll Treat you well</p>
+        <h3 class="subheading1">ADULT & PAEDIATRIC BONE MARROW <br> TRANSPLANT PROGRAMME</h3>
+        <p class="subheading2">Haematology | Oncology | Immunology</p>
+        <button class="appointmentbutton">Book an Appointment</button>
+      </div>
+
+      <div class="col-6">
+        <div class="container formbody">
+          <h5 class="formtitle">Enquire Form</h2>
+            <form class="formdata">
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="email" placeholder="Name" name="email">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="pwd" placeholder="Email id" name="pwd">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="pwd" placeholder="Phone no." name="pwd">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-10">
+                  <textarea type="password" class="form-control" id="pwd" placeholder="Your message"
+                    name="pwd"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default submitbutton">Submit</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col boneimagehead">
+        <img src="Group 3 (1).png" alt="Bone image" class="boneimage">
+      </div>
+      <div class="col bonepara">
+        <p class="boneheading">Bone Marrow Transplant (BMT) better known as haematopoietic stem cell transplant(HSCT) as
+          bone marrow cells are transplanted</p>
+        <p class="bonesubpara">Replacement of diseased or defective marrow with marrow from a healthy donor</p>
+        <hr>
+        <p class="bonesubpara">Medicines and in certain situations radiotherapy as well is given to get rid of diseased
+          marrow and bone marrow cells from healthy donor is given to replace it.</p>
+        <hr>
+        <p class="bonesubpara">IN autologous bone marrow transplant, high dose chemotherapy is given to kill cancer
+          cells and child own marrow cells are given back</p>
+      </div>
+    </div>
+    <h2 class="doctors">Doctors</h2>
+
+    <div class="row">
+      <div class="col ">
+        <div class="doctorcard">
+          <p class="doctorcardheading">Pediatric BMT</p>
+          <img src="Bitmap Copy.png" alt="dr vijay">
+          <p class="doctorname">Dr. Vijay Agarwal</p>
+          <p class="doctordescription">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</p>
+          <hr class="middleline">
+          <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology.
+            Dr.
+            Agarwal has been practising Medical Oncology since 2004.</p>
+          <button class="knowmore">Know More</button>
+        </div>
+      </div>
+      <div class="col ">
+        <div class="doctorcard1">
+          <p class="doctorcardheading">Pediatric BMT</p>
+          <img src="Bitmap Copy.png" alt="dr vijay">
+          <p class="doctorname">Dr. Vijay Agarwal</p>
+          <p class="doctordescription">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</p>
+          <hr class="middleline">
+          <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology.
+            Dr.
+            Agarwal has been practising Medical Oncology since 2004.</p>
+          <button class="knowmore">Know More</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ">
+        <div class="doctorcard">
+          <p class="doctorcardheading">Pediatric BMT</p>
+          <img src="Bitmap Copy.png" alt="dr vijay">
+          <p class="doctorname">Dr. Vijay Agarwal</p>
+          <p class="doctordescription">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</p>
+          <hr class="middleline">
+          <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology.
+            Dr.
+            Agarwal has been practising Medical Oncology since 2004.</p>
+          <button class="knowmore">Know More</button>
+        </div>
+      </div>
+      <div class="col ">
+        <div class="doctorcard1">
+          <p class="doctorcardheading">Pediatric BMT</p>
+          <img src="Bitmap Copy.png" alt="dr vijay">
+          <p class="doctorname">Dr. Vijay Agarwal</p>
+          <p class="doctordescription">MD, MRCP, PhD,CCT Lead & Sr. Consultant - Medical Oncology & Haematology</p>
+          <hr class="middleline">
+          <p>Dr. Vijay Agarwal is a Senior Consultant Medical Oncologist with over 12 years of experience in Oncology.
+            Dr.
+            Agarwal has been practising Medical Oncology since 2004.</p>
+          <button class="knowmore">Know More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h2 class="narrowtransplant">What are the types of Bone Marrow Transplant?</h2>
+        <ul class="list">
+          <li class="marrowlist">Autologous Bone Marrow Transplant - Marrow cells are collected from the patient’s own
+            body and transfused back after high dose chemotherapy</li>
+          <li class="marrowlist"> Allogenic Bone Marrow Transplant (Matched Sibling Donor) – Replacement of diseased or
+            defective marrow with marrow from a genetically (HLA) matched sibling donor</li>
+          <li class="marrowlist">Allogenic Bone Marrow Transplant (Matched Unrelated Donor) – Replacement of diseased or
+            defective marrow with marrow from a genetically (HLA) matched donor obtained from bone marrow registries in
+            India and abroad</li>
+          <li class="marrowlist">Haplo-Identical Bone Marrow Transplant - Replacement of diseased or defective marrow
+            with marrow from the parent</li>
+          <li class="marrowlist">Umbilical cord Bone Marrow Transplant - Replacement of diseased or defective marrow
+            with marrow from a genetically (HLA) matched umbilical cord donor obtained from umbilical cord registries in
+            India and abroad.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h2 class="narrowtransplant">The warning signs of Immune deficiency</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col warningbox firstbox">
+        <img src="Group 2.png" alt="failure to thief" style="padding-top: 20px;">
+        <p>Failure to thrive – not gaining weight and height as per the age norms</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon2.png" alt="infection" style="padding-top: 40px;">
+        <p>Infections warranting multiple hospitalizations</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon3.png" alt="intravenous" style="padding-top: 20px;">
+        <p>Requirement of intravenous antibiotics to clear infections</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon4.png" alt="pneumonia" style="padding-top: 35px;">
+        <p>2 or more episodes of pneumonia</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col warningbox firstbox">
+        <img src="icon 5.png" alt="failure to thief">
+        <p>Family history of death of children at young age due to immune deficiencys</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon6.png" alt="failure to thief">
+        <p>Repeated episodes of diarrhea</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon 7.png" alt="failure to thief">
+        <p>2 or more episodes of sinus infections within a year</p>
+      </div>
+      <div class="col warningbox">
+        <img src="icon 8.png" alt="failure to thief">
+        <p>2 or more episodes of ear discharge.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 warningbox firstbox">
+        <img src="icon 9.png" alt="failure to thief">
+        <p>Repeated skin infections</p>
+      </div>
+      <div class="col-3 warningbox">
+        <img src="icon 10.png" alt="failure to thief">
+        <p>Repeated abscess formation (liver abscess, brain abscess)</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col questioncolor">
+        <h2 style="padding-right: 150px;">What are the conditions that requireBone Marrow Transplant?</h2>
+        <img id="displaymenu" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+
+      </div>
+    </div>
+
+    <div class="row marrowtransplantcondin">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col questioncolor1">
+        <h2 style="padding-right: 10px;">Which are the hematological diseases that may benefit from bone marrow
+          transplants?</h2>
+        <img id="displaymenu1" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+
+      </div>
+    </div>
+
+    <div class="row marrowtransplantcondin1">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed1">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col questioncolor1">
+        <h2 style="padding-right: 10px;">Which are the Cancers that may benefit from bone marrow transplants?</h2>
+        <img id="displaymenu2" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+      </div>
+    </div>
+
+    <div class="row marrowtransplantcondin1">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed2">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col questioncolor1">
+        <h2 style="padding-right: 10px;">Do bone marrow failure syndromes require BMT?</h2>
+        <img id="displaymenu3" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+      </div>
+    </div>
+
+    <div class="row marrowtransplantcondin1">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed3">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col questioncolor1">
+        <h2 style="padding-right: 10px;">What are Primary Immune Deficiency diseases ?</h2>
+        <img id="displaymenu4" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+      </div>
+    </div>
+
+    <div class="row marrowtransplantcondin1">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed4">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col questioncolor1">
+        <h2 style="padding-right: 10px;">What makes transplants at Aster CMI unique?</h2>
+        <img id="displaymenu5" src="Path Copy 5.png" alt=""
+          style="height: 12px;transform: translateY(15px);cursor: pointer;">
+      </div>
+    </div>
+
+
+    <div class="row marrowtransplantcondin1">
+      <div class="col">
+        <hr class="linebreak">
+        <ul class="showedclass" id="showed5">
+          <li>BMT is the treatment of choice for blood disorders like Thalassemia, Sickle Cell anemia, bone marrow
+            failure syndromes like Aplastic anemia, serious immune deficiencies and certain genetic metabolic disorders
+          </li>
+          <li>It is also used to treat high risk cancers like some cases of Acute Lymphoblastic Leukemia, Acute Myeloid
+            Leukemia, Multiple Myeloma and solid tumours like Neuroblastoma, Ewings Sarcoma and certain relapsed cancers
+            like Lymphomas</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <h2 class="testimonials">Testimonials</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p class="testimonialpara">It is a long established fact that a reader will be distracted by the readable
+          content of a page <br>when looking at its layout.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ">
+        <div class="card rectangle">
+          <div class="row no-gutters imagesetting">
+            <div class="col-auto">
+              <img src="johndoe.png" class="img-fluid" alt="" style="margin-top: 25px;margin-left: 21px;">
+            </div>
+            <div class="col">
+              <div class="card-block px-2">
+                <h4 class="card-title cardname">John Doe</h4>
+                <p class="card-text ">Software Engineer</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <img src="doubleline.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="row longfact">
+            <div class="col">
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rectangle1">
+          <div class="row no-gutters">
+            <div class="col-auto">
+              <img src="johndoe.png" class="img-fluid" alt="" style="margin-top: 25px;margin-left: 21px;">
+            </div>
+            <div class="col">
+              <div class="card-block px-2">
+                <h4 class="card-title cardname">John Doe</h4>
+                <p class="card-text">Software Engineer</p>
+              </div>
+            </div>
+            <div class="col-auto">
+              <img src="doubleline.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="row longfact">
+            <div class="col">
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col buttonhead">
+      <div class="row">
+        <button class="appointmentbutton">Book An Appointment</button>
+      </div>
+    </div>
+
+    <div class="col" style="background-color: black;padding-top: 50px;">
+      <div class="row icons">
+        <img src="facebook icon.png" alt="" style="margin-right: 6px;"> 
+        <img src="insta.png" alt=""  style="margin-right: 6px;">
+        <img src="005-twitter 2.png" alt="" style="margin-right: 6px;">
+        <img src="003-youtube 2.png" alt="" style="margin-right: 6px;">
+        <img src="006-linkedin 2.png" alt="">
+      </div>
+        <hr style="border-top: 1px solid #ffff;width: 265px;transform: translateX(-66px);">
+      <div class="row copyright">
+        <p>Aster CMI. All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var arrow = document.getElementById("displaymenu");
+  var display = false
+  arrow.addEventListener('click', function () {
+    if (display == false) {
+      document.getElementById("showed").style.display = "inline"
+    } else {
+      document.getElementById("showed").style.display = "none"
+    }
+
+    display = !display;
+
+  })
+
+  var arrow = document.getElementById("displaymenu1");
+  var display1 = false
+  arrow.addEventListener('click', function () {
+    if (display1 == false) {
+      document.getElementById("showed1").style.display = "inline"
+    } else {
+      document.getElementById("showed1").style.display = "none"
+    }
+
+    display1 = !display1;
+
+  })
+
+
+  var arrow = document.getElementById("displaymenu2");
+  var display2 = false
+  arrow.addEventListener('click', function () {
+    if (display2 == false) {
+      document.getElementById("showed2").style.display = "inline"
+    } else {
+      document.getElementById("showed2").style.display = "none"
+    }
+
+    display2 = !display2;
+
+  })
+
+  var arrow = document.getElementById("displaymenu3");
+  var display3 = false
+  arrow.addEventListener('click', function () {
+    if (display3 == false) {
+      document.getElementById("showed3").style.display = "inline"
+    } else {
+      document.getElementById("showed3").style.display = "none"
+    }
+
+    display3 = !display3;
+
+  })
+
+
+
+  var arrow = document.getElementById("displaymenu4");
+  var display4 = false
+  arrow.addEventListener('click', function () {
+    if (display4 == false) {
+      document.getElementById("showed4").style.display = "inline"
+    } else {
+      document.getElementById("showed4").style.display = "none"
+    }
+
+    display4 = !display4;
+
+  })
+
+
+  var arrow = document.getElementById("displaymenu5");
+  var display5 = false
+  arrow.addEventListener('click', function () {
+    if (display5 == false) {
+      document.getElementById("showed5").style.display = "inline"
+    } else {
+      document.getElementById("showed5").style.display = "none"
+    }
+
+    display5 = !display5;
+
+  })
+</script>
+
+</html>
